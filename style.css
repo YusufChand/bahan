@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root{
+    --color-primary: green;
+    --color-secondary: greenyellow;
+    --color-white: white;
+    --color-grey: grey;
+    --color-grey2: rgba(144, 144, 144, 0.429);
+    --color-grey3: rgb(200, 200, 200);
+    --box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4);
+    --box-color: rgb(2, 1, 40);
+    --color-greyopa: rgba(128, 128, 128, 0.3);
+}
+header{
+    height: 100vw;
+    color: var(--color-white);
+    overflow: hidden;
+}
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: var(--color-secondary);
+    font-size: 1.1rem;
+    color: var(--color-white);
+    transition: all .5s ease-in-out;
+}
+.upper-content{
+    background-color: var(--color-primary);
+    height: 5rem;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+}
+.upper-content .left-upper{
+    align-items: center;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+}
+.upper-content .left-upper img{
+    width: 20rem;
+    margin-left: 1rem;
+    cursor: pointer;
+    padding: 0 0.2rem;
+}
+.upper-content .right-upper{
+    align-items: center;
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    column-gap: 1.5rem;
+    margin-right: 3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    cursor: pointer;
+}
+.main-contents{
+    height: 60rem;
+    padding: 0;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+.main-contents .background{
+    position: relative;
+    place-items: center;
+    display: grid;
+    height: 60rem;
+    width: 100vw;
+}
+.main-contents .background::before{
+    background-image: url('./image/MainContent/background.png');
+    background-size: cover;
+    filter: brightness(20%);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.main-contents .background .logo{
+    position: relative;
+    display: flex;
+    width: 60%;
+    height: 20rem;
+    max-width: 90rem;
+    max-height: 20rem;
+    top: -5rem;
+}
+.main-contents .background .logo:hover .background::before{
+    filter: brightness(100%);
+}
