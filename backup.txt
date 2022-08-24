@@ -1,0 +1,62 @@
+                <div class="right-about">
+                    <div class="portoshape"></div>
+                    <div class="porto" id="logohov">
+                        <img src="image/About/logopotong.png" alt="">
+                    </div>
+                    <div class="achive">
+                        <div class="num-ach">
+                            <div class="ach-text">
+                                <p class="large-text">100+</p>
+                                <p class="small-text">Project <br>Finished</p>
+                            </div>
+                        </div>
+                        <div class="num-ach">
+                            <div class="ach-text">
+                                <p class="large-text">100+</p>
+                                <p class="small-text">Project <br>Finished</p>
+                            </div>
+                        </div>
+                        <div class="num-ach">
+                            <div class="ach-text">
+                                <p class="large-text">100+</p>
+                                <p class="small-text">Project <br>Finished</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+.about-con .right-about{
+    margin-left: 6rem;
+    display: flex;
+    align-items: center;
+}
+.about-con .right-about .portoshape{
+    width: 15%;
+    height: 25%;
+    background-color: var(--white);
+    transition: all .5s ease-in-out;
+    position: absolute;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.about-con .right-about .porto{
+    margin-left: 20px;
+    z-index: 1;
+}
+.about-con .right-about .porto img{
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+}
+.about .right-about .achive{
+    position: absolute;
+    display: flex;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    width: 15%;
+    height: 40%;
+    background-color: var(--white);
+    transition: all .5s ease-in-out;
+}
+
+

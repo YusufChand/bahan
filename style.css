@@ -19,7 +19,7 @@
     --white:white;
 }
 header{
-    height: 100vw;
+    height: 200vw;
     color: var(--color-white);
     overflow: hidden;
 }
@@ -62,7 +62,7 @@ body{
     cursor: pointer;
 }
 .main-contents{
-    height: 60rem;
+    height: 55rem;
     padding: 0;
     display: grid;
     align-content: center;
@@ -72,7 +72,7 @@ body{
     position: relative;
     place-items: center;
     display: grid;
-    height: 60rem;
+    height: 55rem;
     width: 100vw;
 }
 .main-contents .background::before{
@@ -101,6 +101,9 @@ body{
 }
 
 /* about */
+.about-info{
+    height: 60rem;
+}
 .about-info .main-title{
     text-align: center;
     margin-top: 4rem;
@@ -148,29 +151,113 @@ body{
 }
 .about-con .small-title{
     font-size: 2rem;
+    margin-top: 1.5rem;
+    font-weight: 500;
     text-align: justify;
 }
-
 .about-con .right-about{
-    margin-left: 6rem;
-    display: flex;
-    align-items: center;
+    --s: 180px;
+    --g: 10px;
+    display: grid;
+    margin-left: 20rem;
+    margin-top: 7rem;
 }
-.about-con .right-about .portoshape{
-    width: 15%;
-    height: 25%;
-    background-color: var(--white);
-    transition: all .5s ease-in-out;
-    position: absolute;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-}
-
-.about-con .right-about .porto{
-    margin-left: 20px;
-    z-index: 1;
-}
-.about-con .right-about .porto img{
-    width: 150%;
-    height: 150%;
+.about-con .right-about > img{
+    grid-area: 1/1;
+    width: var(--s);
+    aspect-ratio: 0.866;
     object-fit: cover;
+    clip-path: polygon(0% 25%,0% 75%,50% 100%,100% 75%,100% 25%,50% 0);
+    transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+    cursor: pointer;
+    transition: .5s linear;
+    background-color: var(--color-white);
+}
+.about-con .right-about > img:hover{
+    z-index: 1;
+    --_t: 1.2;
+    background-color: var(--color-primary);
+}
+.right-about > img:nth-child(1) {--_x: calc(-100% - var(--g))}
+.right-about > img:nth-child(7) {--_x: calc( 100% + var(--g))}
+.right-about > img:nth-child(3),
+.right-about > img:nth-child(5) {--_y: calc(-75% - .87*var(--g))}
+.right-about > img:nth-child(4),
+.right-about > img:nth-child(6) {--_y: calc( 75% + .87*var(--g))}
+.right-about > img:nth-child(3),
+.right-about > img:nth-child(4) {--_x: calc(-50% - .5*var(--g))}
+.right-about > img:nth-child(5), 
+.right-about > img:nth-child(6) {--_x: calc( 50% + .5*var(--g))}
+
+.academic .main-title{
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    color: var(--color-primary);
+}
+.academic .main-title h1{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+    color: black;
+}
+.academic .main-title .title-line{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: black;
+    display: block;
+}
+.title-line::before,
+.title-line::after{
+    content: "";
+    display: inline-block;
+    border-top: 1px solid #000;
+    width: 3rem;
+    vertical-align: middle;
+    margin: 0 0.5em;
+}
+.academic .staffphoto .staffs{
+    --n: 1;
+    --m: 5;
+    --g: 5px;
+    --f: .8;
+    
+    display: grid;
+    gap: var(--g);
+    width: 80vw;
+    height: 60vh;
+    margin-left: 10vw;
+    grid-template-columns: repeat(var(--m),auto);
+}
+.academic .staffphoto .staffs > img{
+    width: 0;
+    height: 0;
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    filter: grayscale(50%);
+    transition: .35s linear;
+}
+.academic .staffphoto .staffs img:hover{
+    filter: grayscale(0);
+    width:  calc(80vh*var(--f)/var(--n));
+    height: calc(80vw*var(--f)/var(--m));
+}
+.academic .staffphoto .textstaff{
+    --n: 1;
+    --m: 5;
+    --g: 5px;
+    --f: .8;
+    
+    display: grid;
+    gap: var(--g);
+    width: 80vw;
+    height: 70vh;
+    margin-left: 10vw;
+    grid-template-columns: repeat(var(--m),auto);
+    text-align: center;
 }
