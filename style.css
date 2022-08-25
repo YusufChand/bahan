@@ -32,7 +32,7 @@ body{
 }
 .upper-content{
     background-color: var(--color-primary);
-    height: 5rem;
+    height: 10vh;
     width: 100vw;
     display: flex;
     justify-content: space-between;
@@ -62,7 +62,7 @@ body{
     cursor: pointer;
 }
 .main-contents{
-    height: 55rem;
+    height: 90vh;
     padding: 0;
     display: grid;
     align-content: center;
@@ -72,7 +72,7 @@ body{
     position: relative;
     place-items: center;
     display: grid;
-    height: 55rem;
+    height: 90vh;
     width: 100vw;
 }
 .main-contents .background::before{
@@ -102,7 +102,7 @@ body{
 
 /* about */
 .about-info{
-    height: 60rem;
+    height: 50vw;
 }
 .about-info .main-title{
     text-align: center;
@@ -155,40 +155,111 @@ body{
     font-weight: 500;
     text-align: justify;
 }
-.about-con .right-about{
-    --s: 180px;
-    --g: 10px;
-    display: grid;
-    margin-left: 20rem;
-    margin-top: 7rem;
+
+.right-about{
+    margin-top: -20vh;
 }
-.about-con .right-about > img{
-    grid-area: 1/1;
-    width: var(--s);
-    aspect-ratio: 0.866;
-    object-fit: cover;
-    clip-path: polygon(0% 25%,0% 75%,50% 100%,100% 75%,100% 25%,50% 0);
-    transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+.sectionslide{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider{
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slide{
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+.slide input{
+    display: none;
+}
+.st{
+    width: 20%;
+    transition: 2s;
+}
+.st img{
+    width: 800px;
+    height: 500px;
+    filter: grayscale(80%);
+    transition: .5s ease-in-out;
+}
+.st img:hover{
+    filter: grayscale(0);
+}
+.nav-m{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    justify-content: center;
+    display: flex;
+}
+.m-btn{
+    border: 2px solid var(--color-primary);
+    padding: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: .5s linear;
-    background-color: var(--color-white);
+    transition: 1s;
 }
-.about-con .right-about > img:hover{
-    z-index: 1;
-    --_t: 1.2;
+.m-btn:not(:last-child){
+    margin-right: 30px;
+}
+.m-btn:hover{
     background-color: var(--color-primary);
 }
-.right-about > img:nth-child(1) {--_x: calc(-100% - var(--g))}
-.right-about > img:nth-child(7) {--_x: calc( 100% + var(--g))}
-.right-about > img:nth-child(3),
-.right-about > img:nth-child(5) {--_y: calc(-75% - .87*var(--g))}
-.right-about > img:nth-child(4),
-.right-about > img:nth-child(6) {--_y: calc( 75% + .87*var(--g))}
-.right-about > img:nth-child(3),
-.right-about > img:nth-child(4) {--_x: calc(-50% - .5*var(--g))}
-.right-about > img:nth-child(5), 
-.right-about > img:nth-child(6) {--_x: calc( 50% + .5*var(--g))}
+#radio1:checked ~.first{
+    margin-left: 0;
+}
+#radio2:checked ~.first{
+    margin-left: -20%;
+}
+#radio3:checked ~.first{
+    margin-left: -40%;
+}
+#radio4:checked ~.first{
+    margin-left: -60%;
+}
+.nav-auto{
+    position: absolute;
+    width: 800px;
+    margin-top: 460px;
+    display: flex;
+    justify-content: center;
+}
+.nav-auto div{
+    border: 2px solid var(--color-primary);
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+.nav-auto div:not(:last-child){
+    margin-right: 30px;
+    justify-content: center;
+}
+#radio1:checked ~ .nav-auto .a-b1{
+    background-color: var(--color-primary);
+}
+#radio2:checked ~ .nav-auto .a-b2{
+    background-color: var(--color-primary);
+}
+#radio3:checked ~ .nav-auto .a-b3{
+    background-color: var(--color-primary);
+}
+#radio4:checked ~ .nav-auto .a-b4{
+    background-color: var(--color-primary);
+}
 
+
+.academic{
+    height: 100vw;
+}
 .academic .main-title{
     text-align: center;
     margin-top: 4rem;
@@ -251,7 +322,7 @@ body{
     content: '';
     position: absolute;
     background: inherit;
-    transition: .3s;
+    transition: .5s;
 }
 .hoveranimation:after{
     padding: 3.25vw;
