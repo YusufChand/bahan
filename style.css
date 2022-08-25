@@ -219,67 +219,60 @@ body{
     vertical-align: middle;
     margin: 0 0.5em;
 }
-.academic .staffphoto .staffs{
-    --n: 1;
-    --m: 5;
-    --g: 5px;
-    --f: .8;
-    
+
+.row{
     display: grid;
-    gap: var(--g);
-    width: 80vw;
-    height: 60vh;
-    margin-left: 10vw;
-    grid-template-columns: repeat(var(--m),auto);
+    grid-template-columns: repeat(5, 17vw);  
 }
-.academic .staffphoto .staffs > img{
-    width: 0;
-    height: 0;
-    min-height: 100%;
-    min-width: 100%;
-    object-fit: cover;
-    cursor: pointer;
-    filter: grayscale(50%);
-    transition: .35s linear;
-}
-.academic .staffphoto .staffs img:hover{
-    filter: grayscale(0);
-    width:  calc(80vh*var(--f)/var(--n));
-    height: calc(80vw*var(--f)/var(--m));
-}
-.academic .staffphoto .textstaff{
-    --n: 1;
-    --m: 5;
-    --g: 5px;
-    --f: .8;
-    
-    color: var(--color-primary);
-    display: grid;
+.hoveranimation{
+    width: 15vw;
+    height: 40vh;
+    margin-left: 8vw;
+    display: inline-block;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid var(--color-primary);
     position: relative;
-    gap: var(--g);
-    width: 80vw;
-    height: 15vh;
-    margin-left: 10vw;
-    grid-template-columns: repeat(var(--m),auto);
+    overflow: hidden;
+}
+.one{background-image: url(./image/Academics/buDoty.png);}
+.two{background-image: url(./image/Academics/pakZul.png);}
+.three{background-image: url(./image/Academics/buDyah.png);}
+.four{background-image: url(./image/Academics/buLizda.png);}
+.five{background-image: url(./image/Academics/pakRuri.png);}
+
+.hoveranimation:before,
+.hoveranimation:after{
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    background: inherit;
+    transition: .3s;
+}
+.hoveranimation:after{
+    padding: 3.25vw;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    align-items: center;
     text-align: center;
-    margin-top: -10rem;
-    z-index: 1;
-}
-.academic .staffphoto .textstaff .phototext{
-    width: 14vw;
-    height: 10vh;
-    display: block;
-    margin: auto;
-    background-color: var(--color-white);
-    border-radius: 10px;
-    align-content: center;
-    transition: all .5s ease-in-out;
-}
-.academic .staffphoto .textstaff .phototext h1{
+    color: var(--color-white);
     font-size: 2rem;
-    font-weight: 600;
-}
-.academic .staffphoto .textstaff .phototext h2{
-    font-size: 1.5rem;
     font-weight: 500;
+    text-transform: uppercase;
+    background: var(--color-primary);
+    transform: translateY(100%);
+    content: attr(data-text);
+}
+.hoveranimation:hover:before{
+    transform: translateY(-50%);
+}
+.hoveranimation:hover:after{
+    transform: translateY(0);
 }
