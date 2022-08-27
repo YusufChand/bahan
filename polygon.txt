@@ -1,0 +1,60 @@
+.about-con .right-about{
+    --s: 180px;
+    --g: 10px;
+    display: grid;
+    margin-left: 20rem;
+    margin-top: 7rem;
+}
+.about-con .right-about > img{
+    grid-area: 1/1;
+    width: var(--s);
+    aspect-ratio: 0.866;
+    object-fit: cover;
+    clip-path: polygon(0% 25%,0% 75%,50% 100%,100% 75%,100% 25%,50% 0);
+    transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+    cursor: pointer;
+    transition: .5s linear;
+    background-color: var(--color-white);
+}
+.about-con .right-about > img:hover{
+    z-index: 1;
+    --_t: 1.2;
+    background-color: var(--color-primary);
+}
+.right-about > img:nth-child(1) {--_x: calc(-100% - var(--g))}
+.right-about > img:nth-child(7) {--_x: calc( 100% + var(--g))}
+.right-about > img:nth-child(3),
+.right-about > img:nth-child(5) {--_y: calc(-75% - .87*var(--g))}
+.right-about > img:nth-child(4),
+.right-about > img:nth-child(6) {--_y: calc( 75% + .87*var(--g))}
+.right-about > img:nth-child(3),
+.right-about > img:nth-child(4) {--_x: calc(-50% - .5*var(--g))}
+.right-about > img:nth-child(5), 
+.right-about > img:nth-child(6) {--_x: calc( 50% + .5*var(--g))}
+
+.shape{
+    transition: all .5s ease-in-out;
+    width: 60%;
+    height: 80%;
+    background-color: var(--color-primary);
+    background-image: url(./image/About/Labor.jpg);
+    background-size: cover;
+    position: absolute;
+    border: 10px solid var(--color-primary);
+    right: 0;
+    top: 120vh;
+    z-index: -1;
+    clip-path: polygon(55% 0, 100% 0, 100% 100%, 58% 100%, 39% 28%);
+    transform: translate(var(--_x,0),var(--_y,0)) scale(var(--_t,1));
+    cursor: pointer;
+    transition: .5s linear;
+}
+
+
+<div class="right-about">
+                    <img src="image/About/logopotong.png" alt="">
+                    <img src="image/About/atom.jpg" alt="">
+                    <img src="image/About/experiment.png" alt="">
+                    <img src="image/About/nano.jpeg" alt="">
+</div>
+<div class="shape"></div>
