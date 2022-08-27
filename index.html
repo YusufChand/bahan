@@ -12,18 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body class="parent">
-    <header class="section sec1 header active">
-        <div class="upper-content">
-            <div class="left-upper">
-                <img src="image/UpperContent/Logo Bahan.png" alt="">
-            </div>
-            <div class="right-upper">
-                <div class="home">HOME</div>
-                <div class="home">PROJECT</div>
-                <div class="home">ABOUT</div>
-                <div class="home">ABOUT</div>
-            </div>
-        </div>
+    <header class="section sec1 header active" id="home">
         <div class="main-contents">
             <div class="background" id="background">
                 <div class="logo" id="logo">
@@ -52,7 +41,7 @@
                     </div>
                 </div>
                 <div class="right-about">
-                    <section class="sectionslide">
+                    <div class="sectionslide">
                         <div class="slider">
                             <div class="slide">
                                 <input type="radio" name="radio-btn" id="radio1">
@@ -85,7 +74,7 @@
                                 <label for="radio4" class="m-btn"></label>
                             </div>
                         </div>
-                    </section>
+                    </div>
                 </div>
             </div>
         </div>
@@ -173,7 +162,7 @@
                 </div>
             </div>
             <div class="right-bottom">
-                <div class="follows">Conect With Us</div>
+                <div class="follows">Connect With Us</div>
                 <div class="logomedia">
                     <div class="media">
                         <i class="fa-brands fa-linkedin-in"></i>
@@ -195,6 +184,31 @@
             </div>
         </div>
     </header>
+    <main>
+        <section class="section sec2 project" id="project">
+
+        </section>
+        <section class="section sec3 team" id="team">
+            
+        </section>
+        <section class="section sec4 research" id="research">
+            
+        </section>
+    </main>
+
+    <div class="controls">
+        <div class="upper-content">
+            <div class="left-upper">
+                <img src="image/UpperContent/Logo Bahan.png" alt="">
+            </div>
+            <div class="right-upper">
+                <div class="control control-1 active-btn" data-id="home">HOME</div>
+                <div class="control control-2" data-id="project">PROJECT</div>
+                <div class="control control-3" data-id="team">TEAM</div>
+                <div class="control control-4" data-id="research">RESEARCH</div>
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
