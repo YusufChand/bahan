@@ -1,3 +1,12 @@
+window.onresize=screen;
+window.onload=screen;
+function screen(){
+  myWidth = window.innerWidth;
+  document.getElementById("size").innerHTML=myWidth;
+}
+
+
+
 const links = document.querySelectorAll( ".logo" );
 for ( let i = 0; i < links.length; i++ ) {
   const link = links[ i ];
@@ -54,6 +63,11 @@ function PageTransitions(){
         let element = document.body;
         element.classList.toggle('light-mode');
     })
+}
+
+// upper content //
+function appear(){
+  document.getElementById('appearcontrol').style.display="block";
 }
 
 PageTransitions();
