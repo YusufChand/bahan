@@ -608,6 +608,121 @@ section{
     font-size: 5rem;
 }
 
+
+/* PAGE 2 */
+.sec2 .main-title{
+    text-align: center;
+    margin-top: 10vh;
+    color: var(--color-primary);
+}
+.sec2 .main-title h1{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+    color: black;
+}
+.sec2 .main-title .title-line{
+    position: relative;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: black;
+    display: block;
+}
+.title-line::before,
+.title-line::after{
+    content: "";
+    display: inline-block;
+    border-top: 1px solid #000;
+    width: 3rem;
+    vertical-align: middle;
+    margin: 0 0.5em;
+}
+.ongoing-project{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 10vh;
+}
+.bigongoing{
+    background-color: var(--color-primary);
+    height: 50vh;
+    width: 20vw;
+    margin-top: 20rem;
+    margin-left: -10rem;
+    border-radius: 15px;
+    font-size: 4rem;
+    text-align: center;
+    padding-top: 50%;
+    border: 1px solid var(--color-primary);
+    box-shadow: var(--box-shadow);
+    transition: all .5s ease-in-out;
+}
+.bigongoing:hover{
+    cursor: default;
+    transform: translateY(-5px);
+    border: 1px solid var(--color-secondary);
+}
+.smallongoing{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    width: 60vw;
+    margin-left: 5rem;
+}
+.smallongoing .projectcon{
+    position: relative;
+    background-color: var(--color-grey);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    transition: all .5s ease-in-out;
+}
+.smallongoing .projectcon:hover{
+    transform: translateY(-5px);
+    transition: all .5s ease-in-out;
+}
+.smallongoing .projectcon img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    filter: grayscale(100%);
+    transition: all .5s ease-in-out;
+}
+.smallongoing .projectcon:hover img{
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+.smallongoing .projectcon .projtext{
+    margin-top: -7px;
+    padding: 1.1rem;
+    border-top: 8px solid var(--color-secondary);
+}
+.smallongoing .projectcon .projtext h4{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: .7rem;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    color: var(--color-secondary);
+}
+.smallongoing .projectcon .projtext p{
+    color: var(--color-grey3);
+    line-height: 2rem;
+    padding-bottom: 1rem;
+    text-justify: inherit; 
+}
+.smallongoing .projectcon .projtext h4:hover{
+    color: var(--color-primary);
+}
+
+
+
+
+
+
+/* RESPONSIVE */
 @media (max-width : 1800px){
     .about-con .big-title{
         font-size: 2rem;
