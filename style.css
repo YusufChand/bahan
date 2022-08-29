@@ -600,6 +600,7 @@ section{
 }
 
 #size{
+    display: none;
     position: absolute;
     top: 5%;
     left: 50%;
@@ -610,6 +611,9 @@ section{
 
 
 /* PAGE 2 */
+.sec2{
+    height: 200vw;
+}
 .sec2 .main-title{
     text-align: center;
     margin-top: 10vh;
@@ -715,6 +719,85 @@ section{
 }
 .smallongoing .projectcon .projtext h4:hover{
     color: var(--color-primary);
+}
+
+.finishedtext{
+    text-align: center;
+    font-size: 4rem;
+    margin: 15vh;
+    color: black;
+    font-weight: 600;
+}
+.finishedtext span{
+    color: var(--color-primary);
+}
+.projectyear22{
+    font-size: 2rem;
+    margin-left: -7rem;
+    margin-top: 0vh;
+    position: relative;
+    border-bottom: solid 2px;
+    width: 500px;
+}
+.projectyear21{
+    font-size: 2rem;
+    margin-left: -7rem;
+    margin-top: 3rem;
+    position: relative;
+    border-bottom: solid 2px;
+    width: 500px;
+}
+.finishedproject{
+    margin-top: 5vh;
+    display: grid;
+    grid-template-columns: repeat(4, 300px);
+    grid-gap: 8rem;
+    padding-bottom: 3rem;
+    margin-left: -7rem;
+}
+.timeline-item{
+    position: relative;
+    padding-left: .5rem;
+    border-left: 1px solid var(--color-white);
+}
+.tl-icon{
+   position: absolute;
+   left: -80px;
+   top: 0;
+   background-color: var(--color-primary);
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+.tl-icon i{
+    font-size: 1.3rem;
+}
+.tl-duration{
+    padding: .2rem .6rem;
+    background-color: var(--color-grey);
+    border-radius: 15px;
+    display: inline-block;
+    font-size: .8rem;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.timeline-item h5{
+    padding: 1rem 0;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+.timeline-item h5 span{
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.timeline-item p{
+   color: var(--color-white); 
 }
 
 
