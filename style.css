@@ -1,4 +1,6 @@
-
+html{
+    scroll-behavior: smooth;
+}
 *{
     padding: 0;
     margin: 0;
@@ -24,7 +26,7 @@
     --desktop : 1200px;
 }
 header{
-    height: 425vh;
+    height: 450vh;
     color: var(--color-white);
     overflow: hidden;
 }
@@ -80,7 +82,6 @@ section{
 .active{
     display: block;
 }
-
 .controls{
     position: fixed;
     z-index: 10;
@@ -159,7 +160,8 @@ section{
     background-color: rgb(0, 78, 0);
 }
 .main-contents{
-    height: 110vh;
+    height: 105vh;
+    margin-top: 5vh;
     padding: 0;
     display: grid;
     align-content: center;
@@ -169,7 +171,7 @@ section{
     position: relative;
     place-items: center;
     display: grid;
-    height: 90vh;
+    height: 105vh;
     width: 100vw;
 }
 .main-contents .background::before{
@@ -194,18 +196,39 @@ section{
     height: 400px;
     align-items: center;
 }
-.main-contents .background .logo:hover .background::before{
-    filter: brightness(100%);
+
+.main-contents .background a{
+    margin-top: 60vh;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    z-index: 10;
+    font-size: 2rem;
+    align-items: center;
+    width: 300px;
+    height: 75px;
+    padding-top: 18px;
+    background-color: var(--color-grey);
+    border-radius: 10px;
+    transition: all .3s ease-in;
+    box-shadow: var(--box-shadow);
+}
+.main-contents .background a:hover{
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: solid 1px var(--color-primary);
 }
 
 /* about */
 .about-info{
     height: 100vh;
+    width: 100vw;
+    border-top: solid 5vh var(--color-primary);
 }
 .about-info .main-title{
     text-align: center;
-    margin-top: -2rem;
     color: var(--color-primary);
+    margin-top: 5vh;
 }
 .about-info .main-title h1{
     position: relative;
@@ -359,6 +382,7 @@ section{
 /* academic */
 .academic{
     height: 80vh;
+    margin-top: 15vh;
 }
 .academic .main-title{
     text-align: center;

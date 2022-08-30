@@ -7,7 +7,7 @@ function screen(){
 
 
 
-const links = document.querySelectorAll( ".logo" );
+const links = document.querySelectorAll( ".background a" );
 for ( let i = 0; i < links.length; i++ ) {
   const link = links[ i ];
   link.addEventListener( "mouseover", function() {
